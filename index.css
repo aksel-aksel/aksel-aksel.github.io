@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#inputdiv {
+    height: 200px;
+    display: flex;
+    background-color: #465775;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    width: 150px;
+    border-radius: 0px;
+    border: 1px solid #56e39f;
+    background-color: #ef6f6c;
+    box-shadow: 1px 1px;
+}

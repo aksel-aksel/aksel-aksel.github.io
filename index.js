@@ -6,7 +6,7 @@ var div = document.getElementById('answerdiv');
 
 btn1.addEventListener('click', function(e) {
     createThem();
-    console.log(1)
+    console.log("Damn, " + input1.value + ". \n Good Luck lmao")
 });
 
 function createThem() {

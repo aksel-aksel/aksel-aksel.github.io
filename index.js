@@ -10,17 +10,13 @@ btn1.addEventListener('click', function(e) {
 });
 
 function createThem() {
-    var rep = [5, 3, 1, 1];
-    var prosent = [60, 75, 85, 92.5];
+    var rep = [5, 3, 1, 1];var prosent = [60, 75, 85, 92.5];
 
     for (var i = 0; i < 4; i++) {
         var h = document.createElement('h3');
         h.className = "answer";
-        if (rep[i] > 1) {
-            h.innerText = rep[i] + " reps, " + (input1.value * prosent[i] / 100) + "kg"   
-        } else {
-            h.innerText = rep[i] + " rep, " + (input1.value * prosent[i] / 100) + "kg"   
-        }
+        var r;if(rep[i]>1){r="reps"}else{r="rep"};
+        h.innerText = rep[i] + r + (input1.value * prosent[i] / 100) + "kg"   
         div.appendChild(h)
     }
 }

@@ -15,8 +15,8 @@ main {
   
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .weightdiv {
@@ -47,6 +47,7 @@ main {
 .activeweight, .weightdiv {
     width: 100%;
     border-radius: 6px;
+    height: 45px;
 }
 
 

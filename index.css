@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 100%;
+
     width: 100%;
     display: block;
     background-color: #465775;
@@ -15,8 +15,8 @@ main {
   
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+   
+    width: 100vw;
 }
 
 .weightdiv {
@@ -47,7 +47,6 @@ main {
 .activeweight, .weightdiv {
     width: 100%;
     border-radius: 6px;
-    height: 45px;
 }
 
 
@@ -68,9 +67,11 @@ p {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    
 }
 
 #wdiv {
+ 
     margin-top: 10px;
     width: 95vw;
     height: 30%;

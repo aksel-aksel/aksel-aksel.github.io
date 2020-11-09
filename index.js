@@ -1,22 +1,28 @@
-var input1 = document.getElementById('input1');
-var btn1 = document.querySelector('button');
-
-var div = document.getElementById('answerdiv');
+var total = 0;
 
 
-btn1.addEventListener('click', function(e) {
-    createThem();
-    console.log("Damn, " + input1.value + ". \n Good Luck lmao")
-});
 
-function createThem() {
-    var rep = [5, 3, 1, 1];var prosent = [60, 75, 85, 92.5];
+for (var i = 0; i < 6; i++) {
+    var ids2 = ['2.5kg', '5kg', '10kg', '20kg', '30kg', '50kg'];
+    document.getElementById(ids2[i]).addEventListener('click', function(e){
+        if (this.className == "activeweight") {
+            this.className = "weightdiv";
+            total -= parseFloat(this.innerText);
+        } else {
+            this.className = "activeweight";
+            total += parseFloat(this.innerText);
+        }
 
-    for (var i = 0; i < 4; i++) {
-        var h = document.createElement('h3');
-        h.className = "answer";
-        var r;if(rep[i]>1){r="reps"}else{r="rep"};
-        h.innerText = rep[i] + r + (input1.value * prosent[i] / 100) + "kg"   
-        div.appendChild(h)
-    }
+        update()
+    })
 }
+
+function update() {
+    var ids = ['60', '75', '85', '92.5'];
+    var txt = ['5 reps: ', '3 reps: ', '1 rep: ', '1 rep: '];
+    for (var i = 0; i < 4; i++) {
+        var n = total/100*parseFloat(ids[i]);
+        document.getElementById(ids[i]).innerText = txt[i]+(Math.floor(n*100)/100)+' kg';
+    };
+}
+
